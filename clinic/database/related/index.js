@@ -43,9 +43,13 @@ let usersrelationpatient = (db) => {
     db.users.hasOne(db.patient);
     db.patient.belongsTo(db.users);
 }
-let typebookingretationbooking = (db) => {
+let typebookingrelatetionbooking = (db) => {
     db.typebooking.hasMany(db.booking);
     db.booking.belongsTo(db.typebooking);
+}
+let companyrelationtotypebooking = (db)=>{
+    db.company.hasOne(db.typebooking);
+    db.typebooking.belongsTo(db.company);
 }
 module.exports = {
     bookingrelationbookingdetail,
@@ -59,5 +63,6 @@ module.exports = {
     usersrelationpatient,
     companyrelationbooking,
     companyrelationbookingdetail,
-    typebookingretationbooking
+    typebookingrelatetionbooking,
+    companyrelationtotypebooking
 }

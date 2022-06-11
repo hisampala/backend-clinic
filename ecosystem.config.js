@@ -8,6 +8,4 @@ module.exports = {
     max_restarts:"5",
     instances : "2"
   }],
-
-
 };

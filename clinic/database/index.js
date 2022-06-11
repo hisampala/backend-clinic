@@ -33,8 +33,8 @@ try {
     relation.usersrelationtcompany = relation.usersrelationtcompany(db);
     relation.usersrelationpatient = relation.usersrelationpatient(db);
     relation.companyrelationpatient = relation.companyrelationpatient(db);
-    relation.typebookingretationbooking = relation.typebookingretationbooking(db);
-    
+    relation.typebookingrelatetionbooking = relation.typebookingrelatetionbooking(db);
+    relation.companyrelationtotypebooking = relation.companyrelationtotypebooking(db);
     
     
     

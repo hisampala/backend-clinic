@@ -102,6 +102,61 @@ let getrepoById = async (id) => {
     }
 
 }
+let getrepoCheckBookingStatusByPatientId = async (PatientId) => {
+    try {
+        const result = await repo.findAll({
+            include: [{
+                model: patient,
+                where: {
+                    id: PatientId
+                }
+            },],
+            order: [
+                ['createdAt', 'DESC']
+            ],
+            limit:1
+        });
+        if (result.length >= 1) {
+            return {
+                bookingstatus:result[0].bookingstatus
+            }
+        }else{
+            return {
+                bookingstatus:null
+            }
+        }
+       
+    } catch (error) {
+        throw (error)
+    }
+
+}
+let getrepoByPatientIdAndBookingStatus = async (PatientId) => {
+    try {
+        const result = await repo.findAll({
+            where: {
+                bookingstatus: 0,
+            },
+            include: [repobookingdetail, {
+                model: patient,
+                where: {
+                    id: PatientId
+                }
+            },]
+        });
+        if (result.length >= 1) {
+            return result[0];
+        }else{
+            return {
+                data:null
+            }
+        }
+       
+    } catch (error) {
+        throw (error)
+    }
+
+}
 let getrepoByCondition = async (key, Condition) => {
     try {
         console.log(key, Condition);
@@ -200,5 +255,7 @@ module.exports = {
     getrepoById,
     getrepoByCondition,
     getrepoByConditionForReport,
-    getrepoByConditionForReportDateFromDateto
+    getrepoByConditionForReportDateFromDateto,
+    getrepoByPatientIdAndBookingStatus,
+    getrepoCheckBookingStatusByPatientId
 }

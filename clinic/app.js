@@ -24,6 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1', apiV1Router);
+app.use('/app', express.static('app'));
+app.use('/login', express.static('app'));
 app.use('*', (req, res) => { res.sendStatus(404) })
 
 // error handler

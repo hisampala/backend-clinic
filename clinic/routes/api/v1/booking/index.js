@@ -63,4 +63,20 @@ router.delete('/:id', async (req, res) => {
         res.end()
     }
 })
+router.get('/getByPatientIdAndBookingStatus/:id', async (req, res) => {
+    try {
+        res.send(await contrller.getrepoByPatientIdAndBookingStatus(req.params.id));
+    } catch (error) {
+        console.log(error);
+        res.end()
+    }
+})
+router.get('/getCheckBookingStatusByPatientId/:id',async(req,res)=>{
+    try {
+        res.send(await contrller.getrepoCheckBookingStatusByPatientId(req.params.id));  
+    } catch (error) {
+        console.log(error);
+        res.end()
+    }
+})
 module.exports = router;
