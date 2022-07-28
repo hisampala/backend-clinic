@@ -21,13 +21,13 @@
     "hpp": "^0.2.3",
     "http-errors": "~1.6.3",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.3",
+    "moment": "^2.29.4",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
     "node-fetch": "^3.2.4",
     "node-sessionstorage": "^1.0.0",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.19.0",
+    "sequelize": "^6.21.2",
     "sha256": "^0.2.0",
     "uuidv4": "^6.2.13"
   }
