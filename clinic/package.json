@@ -24,7 +24,7 @@
     "moment": "^2.29.3",
     "morgan": "~1.9.1",
     "mysql2": "^2.3.3",
-    "node-fetch": "^3.2.4",
+    "node-fetch": "^3.2.10",
     "node-sessionstorage": "^1.0.0",
     "nodemon": "^2.0.15",
     "sequelize": "^6.19.0",
