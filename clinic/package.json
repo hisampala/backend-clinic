@@ -27,7 +27,7 @@
     "node-fetch": "^3.2.4",
     "node-sessionstorage": "^1.0.0",
     "nodemon": "^2.0.15",
-    "sequelize": "^6.19.0",
+    "sequelize": "^6.29.0",
     "sha256": "^0.2.0",
     "uuidv4": "^6.2.13"
   }
